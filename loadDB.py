@@ -12,7 +12,7 @@ DB_PATH = '/opt/datasets/mpp_src'
 files_encountered = 0  # files counter
 total_records = 0  # rows counter over all DB's
 point1 = datetime.now()
-mpp = []  # common list of lists, final collection
+mpp = []
 QUERY = "SELECT * FROM KolParBin"
 
 if __name__ == '__main__':
