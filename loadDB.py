@@ -4,18 +4,11 @@
 # (c) Sergey Simkovich
 
 import sys
-import sqlalchemy_paradox
-from sqlalchemy import create_engine
 from datetime import datetime
 import os
 from pypxlib import Table
 
 DB_PATH = '/opt/datasets/mpp_src'
-# SERVER = 'localhost'
-# PORT = 3050
-# USERNAME = 'SYSDBA'
-# PASSWORD = 'masterkey'
-# CHARSET = 'WIN1251'
 files_encountered = 0  # files counter
 total_records = 0  # rows counter over all DB's
 point1 = datetime.now()
