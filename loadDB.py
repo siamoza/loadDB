@@ -35,6 +35,7 @@ if __name__ == '__main__':
                         print(row)
                 sys.exit(0)
         #
+        #
         # db = create_engine("paradox+pyodbc://@your_dsn", echo=False)
         #
         # con = firebirdsql.connect(
