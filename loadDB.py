@@ -34,7 +34,7 @@ if __name__ == '__main__':
                             num_loco = tech = main_tech = freq = repair_code = factory = defect_left = defect_right = ''
 
                             # заполнение переменных, которые есть во всех трёх видах баз
-                            num_wheel = str(row.NumCtrlKolPar)
+                            num_wheel = str(row.NumCtrlKolPar).replace(',', '')  # встречаются лишние запятые, убить
                             num_operator = str(row.TabNumDefMan)
                             result_l = '1' if str(row.Result).split(";")[0] == "Л-Годная" else '0'
                             result_r = '1' if str(row.Result).split(";")[1] == "П-Годная" else '0'
@@ -49,7 +49,7 @@ if __name__ == '__main__':
                                 freq = str(row.Tach)
                                 repair_code = str(row.VID_REMONTA)
                                 factory = str(row.Factory)
-                                defect_left = str(row.DefectLeft)
+                                defect_left = str(row.DefectLeft).replace(',', '')  # встречаются лишние запятые, убить
                                 defect_right = str(row.DefectRight)
 
                             elif len(wheels.fields) == 10:
