@@ -30,11 +30,12 @@ if __name__ == '__main__':
     strings_after = len(mpp)
     print('... удалено', strings_before - strings_after, "строк.")
 
-    print(mpp['num_operator'].unique())
-
     # Очистка 'num_operator'
+    # Цифры вместо фамилий
+    # !TODO:
+    # mpp['num_operator'].replace(to_replace=r"([0-9]+) | (\\.*)", value="", regex=True, inplace=True)
 
-
+    print(mpp['num_operator'].unique())
 
     # mpp['num_operator'].replace(to_replace=r'.*Давы.*', value='Давыдов Д.В.', regex=True, inplace=True)
     # vu90['master1'].replace(to_replace=r'.*Реш.*', value='Решетов Д.В.', regex=True, inplace=True)
