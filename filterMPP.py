@@ -11,7 +11,6 @@ FILTERED = '/opt/datasets/mpp_filtered.txt'
 mpp = pd.DataFrame()
 if __name__ == '__main__':
 
-    # read dataframe from file
     point1 = datetime.now()
     print('Читаем исходник...')
     mpp = pd.read_csv(DATASET_PATH, dtype=str, skipinitialspace=True, delimiter=',')
@@ -30,7 +29,6 @@ if __name__ == '__main__':
     strings_after = len(mpp)
     print('... удалено', strings_before - strings_after, "строк.")
 
-    # Очистка 'num_operator'
     # Цифры вместо фамилий
     mpp['num_operator'].replace(to_replace=r"[0-9]+", value="", regex=True, inplace=True)
     # Левые символы
